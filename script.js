@@ -228,24 +228,6 @@ document.getElementById("submitBtn").addEventListener("click", function () {
 
 });
 
-    // Hide all form steps
-    formSteps.forEach(function (step) {
-        step.hidden = true;
-    });
-
-    // Display success screen
-    document.getElementById("successScreen").hidden = false;
-
-    // Update progress indicator
-    progressBar.style.width = "100%";
-    stepIndicator.textContent = "Demonstration Complete";
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-
 
 // RESTART APPLICATION
 
