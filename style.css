@@ -1,0 +1,418 @@
+/* GENERAL PAGE STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fb;
+    color: #25324a;
+}
+
+/* HEADER */
+
+header {
+    background-color: #003781;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* MAIN CONTENT */
+
+main {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* WELCOME SECTION */
+
+.welcome-section {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-section h2 {
+    color: #003781;
+    margin-top: 0;
+}
+
+.welcome-section p {
+    line-height: 1.7;
+}
+
+/* APPLICATION FORM */
+
+.application-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.application-form h2 {
+    color: #003781;
+    margin-top: 0;
+}
+
+/* FORM FIELDS */
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccd5e0;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+select:focus,
+input:focus {
+    outline: none;
+    border-color: #0077cc;
+}
+
+/* BUTTON */
+
+button {
+    background-color: #003781;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #718096;
+    font-size: 13px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+    main {
+        margin: 20px auto;
+    }
+
+    .welcome-section,
+    .application-form {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+/* TEXTAREA STYLING */
+
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccd5e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #0077cc;
+}
+
+/* BACK BUTTONS */
+
+#backBtn3 {
+    background-color: #e5eaf0;
+    color: #25324a;
+}
+
+#backBtn3:hover {
+    background-color: #cbd5e1;
+}
+/* Ensure hidden steps stay hidden */
+.form-step[hidden] {
+    display: none !important;
+}
+
+/* Form layout */
+.form-step input,
+.form-step select,
+.form-step textarea {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ccd5e0;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+/* Navigation buttons */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-group button {
+    flex: 1;
+}
+
+#backBtn,
+#backBtn3 {
+    background-color: #e5eaf0;
+    color: #25324a;
+}
+
+/* Progress indicator */
+.progress-container {
+    height: 10px;
+    background: #e5eaf0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 20%;
+    background: #0077cc;
+    transition: width 0.3s ease;
+}
+
+.step-indicator {
+    text-align: right;
+    color: #64748b;
+    font-size: 14px;
+}
+/* STEP 4: COVERAGE & PAYMENT */
+
+.coverage-summary {
+    background-color: #f0f6ff;
+    border: 1px solid #c8dcf5;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 30px;
+}
+
+.coverage-summary h3 {
+    color: #003781;
+    margin-top: 0;
+}
+
+.coverage-summary p {
+    margin: 12px 0;
+    line-height: 1.6;
+}
+
+.info-note {
+    font-size: 13px;
+    color: #64748b;
+    border-top: 1px solid #d6e4f5;
+    padding-top: 12px;
+}
+
+.payment-notice {
+    background-color: #fff8e8;
+    border-left: 4px solid #e5a100;
+    padding: 18px;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.payment-notice p {
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+#backBtn4 {
+    background-color: #e5eaf0;
+    color: #25324a;
+}
+
+#backBtn4:hover {
+    background-color: #cbd5e1;
+}
+/* STEP 5: REVIEW & DECLARATION */
+
+.review-container {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.review-container h3 {
+    color: #003781;
+    border-bottom: 1px solid #dbe4ee;
+    padding-bottom: 10px;
+    margin-top: 25px;
+}
+
+.review-container h3:first-child {
+    margin-top: 0;
+}
+
+.review-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.review-row span {
+    color: #64748b;
+    flex: 1;
+}
+
+.review-row strong {
+    color: #25324a;
+    flex: 1;
+    text-align: right;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+/* DECLARATION */
+
+.declaration-section {
+    margin-top: 30px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    margin: 4px 0 0;
+    padding: 0;
+    accent-color: #003781;
+}
+
+.checkbox-label span {
+    flex: 1;
+}
+
+/* BACK BUTTON */
+
+#backBtn5 {
+    background-color: #e5eaf0;
+    color: #25324a;
+}
+
+/* SUBMIT BUTTON */
+
+#submitBtn {
+    background-color: #00875a;
+}
+
+#submitBtn:hover {
+    background-color: #006b47;
+}
+
+/* SUCCESS SCREEN */
+
+#successScreen[hidden] {
+    display: none !important;
+}
+
+.success-container {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    background: #e3f7ee;
+    color: #00875a;
+    border-radius: 50%;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.success-container h2 {
+    color: #00875a;
+}
+
+.success-container p {
+    line-height: 1.7;
+    color: #64748b;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .review-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .review-row strong {
+        text-align: left;
+    }
+
+    .review-container {
+        padding: 18px;
+    }
+
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allianz Shield Plus | Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Allianz Shield Plus</h1>
+    <p>Personal Accident Insurance Application</p>
+</header>
+
+<main>
+    <section class="welcome-section">
+        <h2>Welcome to Your Insurance Application</h2>
+        <p>Complete the following application to apply for Allianz Shield Plus Personal Accident Insurance.</p>
+        <p>This prototype is designed for international applicants seeking insurance coverage in Malaysia.</p>
+    </section>
+
+    <section class="application-form">
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <p class="step-indicator" id="stepIndicator">Step 1 of 5</p>
+
+        <form id="insuranceForm" novalidate>
+
+            <!-- STEP 1 -->
+            <div class="form-step" id="step1">
+
+                <h2>Step 1: Coverage Selection</h2>
+                <p>Select your preferred insurance plan.</p>
+
+                <label for="plan">Insurance Plan *</label>
+
+                <select id="plan" name="plan" required>
+                    <option value="">-- Select a Plan --</option>
+                    <option value="Plan 5">Plan 5 - RM360,000</option>
+                    <option value="Plan 6">Plan 6 - RM600,000</option>
+                    <option value="Plan 7">Plan 7 - RM900,000</option>
+                </select>
+
+                <button type="button" id="nextBtn">Continue</button>
+
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="form-step" id="step2" hidden>
+
+                <h2>Step 2: Applicant Information</h2>
+                <p>Enter your details as shown on your identification document.</p>
+
+                <label for="fullName">Full Name (as per Passport) *</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="idType">Identification Type *</label>
+                <select id="idType" name="idType" required>
+                    <option value="">-- Select Identification Type --</option>
+                    <option value="Passport">Passport</option>
+                    <option value="Other">Other Identification</option>
+                </select>
+
+                <label for="idNumber">Identification Number *</label>
+                <input type="text" id="idNumber" name="idNumber" required>
+
+                <label for="nationality">Nationality *</label>
+                <input type="text" id="nationality" name="nationality" required>
+
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="gender">Gender *</label>
+                <select id="gender" name="gender" required>
+                    <option value="">-- Select Gender --</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+                <div class="button-group">
+                    <button type="button" id="backBtn">Back</button>
+                    <button type="button" id="nextBtn2">Continue</button>
+                </div>
+
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="form-step" id="step3" hidden>
+
+                <h2>Step 3: Contact Information & Employment</h2>
+                <p>Provide your current contact details and occupation.</p>
+
+                <label for="phone">Contact Number (with Country Code) *</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+60123456789"
+                    pattern="\+[1-9][0-9]{7,14}"
+                    required
+                >
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Residential Address *</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <label for="occupation">Current Occupation *</label>
+                <input type="text" id="occupation" name="occupation" required>
+
+                <div class="button-group">
+                    <button type="button" id="backBtn3">Back</button>
+                    <button type="button" id="nextBtn3">Continue</button>
+                </div>
+
+            </div>
+<!-- STEP 4: COVERAGE & PAYMENT -->
+
+<div class="form-step" id="step4" hidden>
+
+    <h2>Step 4: Coverage & Payment</h2>
+
+    <p>
+        Review your selected insurance coverage and provide
+        your preferred payment information.
+    </p>
+
+    <!-- COVERAGE SUMMARY -->
+
+    <div class="coverage-summary">
+
+        <h3>Your Selected Coverage</h3>
+
+        <p>
+            <strong>Insurance Product:</strong>
+            Allianz Shield Plus
+        </p>
+
+        <p>
+            <strong>Selected Plan:</strong>
+            <span id="selectedPlanDisplay">Not selected</span>
+        </p>
+
+        <p>
+            <strong>Coverage Amount:</strong>
+            <span id="coverageAmountDisplay">RM0</span>
+        </p>
+
+        <p class="info-note">
+            The coverage amount represents the insured benefit,
+            not the insurance premium or amount payable.
+        </p>
+
+    </div>
+
+    <!-- PAYMENT SECTION -->
+
+    <h3>Payment Information</h3>
+
+    <p>
+        Please indicate your preferred payment method.
+        No payment will be collected through this prototype.
+    </p>
+
+    <label for="paymentMethod">Preferred Payment Method *</label>
+
+    <select id="paymentMethod" name="paymentMethod" required>
+        <option value="">-- Select Payment Method --</option>
+        <option value="Online Banking">Online Banking</option>
+        <option value="Credit/Debit Card">Credit / Debit Card</option>
+        <option value="Other">Other / To Be Confirmed</option>
+    </select>
+
+    <label for="payerName">Name of Person Making Payment *</label>
+
+    <input
+        type="text"
+        id="payerName"
+        name="payerName"
+        placeholder="Enter payer's full name"
+        required
+    >
+
+    <div class="payment-notice">
+        <strong>Payment Notice</strong>
+
+        <p>
+            This is an assessment prototype.
+            No actual payment is processed.
+            Premiums and payment arrangements must be confirmed
+            through an authorised insurance representative.
+        </p>
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <div class="button-group">
+
+        <button type="button" id="backBtn4">
+            Back
+        </button>
+
+        <button type="button" id="nextBtn4">
+            Continue
+        </button>
+
+    </div>
+
+</div>
+<!-- STEP 5: REVIEW & DECLARATION -->
+
+<div class="form-step" id="step5" hidden>
+
+    <h2>Step 5: Review & Declaration</h2>
+
+    <p>
+        Please review your application carefully before submitting.
+        You can return to previous steps to make corrections.
+    </p>
+
+    <!-- APPLICATION SUMMARY -->
+
+    <div class="review-container">
+
+        <h3>Coverage Information</h3>
+
+        <div class="review-row">
+            <span>Insurance Product</span>
+            <strong>Allianz Shield Plus</strong>
+        </div>
+
+        <div class="review-row">
+            <span>Selected Plan</span>
+            <strong id="reviewPlan"></strong>
+        </div>
+
+        <div class="review-row">
+            <span>Coverage Amount</span>
+            <strong id="reviewCoverage"></strong>
+        </div>
+
+        <h3>Applicant Information</h3>
+
+        <div class="review-row">
+            <span>Full Name</span>
+            <strong id="reviewName"></strong>
+        </div>
+
+        <div class="review-row">
+            <span>Identification Type</span>
+            <strong id="reviewIdType"></strong>
+        </div>
+
+        <div class="review-row">
+            <span>Identification Number</span>
+            <strong id="reviewIdNumber"></strong>
+        </div>
+
+        <div class="review-row">
+            <span>Nationality</span>
+            <strong id="reviewNationality"></strong>
+        </div>
+
+        <div class="review-row">
+            <span>Date of Birth</span>
+            <strong id="reviewDob"></strong>
+        </div>
+
+        <div class="review-row">
+            <span>Gender</span>
+            <strong id="reviewGender"></strong>
+        </div>
+
+        <h3>Contact & Employment</h3>
+
+        <div class="review-row">
+            <span>Contact Number</span>
+            <strong id="reviewPhone"></strong>
+        </div>
+
+        <div class="review-row">
+            <span>Email Address</span>
+            <strong id="reviewEmail"></strong>
+        </div>
+
+        <div class="review-row">
+            <span>Residential Address</span>
+            <strong id="reviewAddress"></strong>
+        </div>
+
+        <div class="review-row">
+            <span>Occupation</span>
+            <strong id="reviewOccupation"></strong>
+        </div>
+
+        <h3>Payment Information</h3>
+
+        <div class="review-row">
+            <span>Preferred Payment Method</span>
+            <strong id="reviewPaymentMethod"></strong>
+        </div>
+
+        <div class="review-row">
+            <span>Payer Name</span>
+            <strong id="reviewPayerName"></strong>
+        </div>
+
+    </div>
+
+    <!-- DECLARATION -->
+
+    <div class="declaration-section">
+
+        <h3>Declaration & Consent</h3>
+
+        <p>
+            Please read and acknowledge the following statements
+            before submitting your application.
+        </p>
+
+        <label class="checkbox-label">
+
+            <input
+                type="checkbox"
+                id="declaration"
+                name="declaration"
+                required
+            >
+
+            <span>
+                I confirm that the information provided in this
+                application is accurate and complete to the best
+                of my knowledge.
+            </span>
+
+        </label>
+
+        <label class="checkbox-label">
+
+            <input
+                type="checkbox"
+                id="privacyConsent"
+                name="privacyConsent"
+                required
+            >
+
+            <span>
+                I understand that my personal information would
+                be processed for the purpose of reviewing this
+                insurance application, subject to the applicable
+                privacy requirements.
+            </span>
+
+        </label>
+
+        <div class="payment-notice">
+            <strong>Assessment Prototype Notice</strong>
+
+            <p>
+                This application is a demonstration developed
+                for an internship assessment. It is not an
+                official Allianz application portal, and
+                submitting this form does not purchase insurance,
+                initiate coverage or transmit an application
+                to Allianz.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <div class="button-group">
+
+        <button type="button" id="backBtn5">
+            Back
+        </button>
+
+        <button type="button" id="submitBtn">
+            Submit Application
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- SUBMISSION CONFIRMATION -->
+
+<div id="successScreen" hidden>
+
+    <div class="success-container">
+
+        <div class="success-icon">✓</div>
+
+        <h2>Application Demonstration Complete!</h2>
+
+        <p>
+            Your application has passed the form validation checks.
+        </p>
+
+        <p>
+            This is a demonstration only.
+            No information has been transmitted to Allianz
+            or stored in an external database.
+        </p>
+
+        <button type="button" id="restartBtn">
+            Start New Application
+        </button>
+
+    </div>
+
+</div>
+        </form>
+
+    </section>
+</main>
+
+<footer>
+    <p>Prototype developed for assessment purposes.</p>
+    <p>Not an official Allianz application portal.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
