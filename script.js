@@ -229,6 +229,7 @@ document.getElementById("submitBtn").addEventListener("click", function () {
 });
 
 
+
 // RESTART APPLICATION
 
 document.getElementById("restartBtn").addEventListener("click", function () {
